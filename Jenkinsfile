@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build Docker Image') {         
             steps{                
-                sh 'docker build -t khraiteka/L.Oreal:$BUILD_NUMBER .'           
+                sh 'docker build -t khraiteka/l-oreal:$BUILD_NUMBER .'           
                 echo 'Build Image Completed'                
             }           
         }
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Push') {
             steps {
-                sh 'docker push khraiteka/L.Oreal:$BUILD_NUMBER'
+                sh 'docker push khraiteka/l-oreal:$BUILD_NUMBER'
                 echo 'Push Image Completed' 
             }
         }
